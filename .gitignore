@@ -1,0 +1,8 @@
+.sass-cache/
+/.sass-cache
+.eslintrc
+.stylelintrc.json
+composer.json
+package.json
+phpcs.xml.dist
+style.css.map
