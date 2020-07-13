@@ -12,17 +12,34 @@ if( !function_exists( 'autocircle_option_page' ) ){
     function autocircle_option_page(){
         ?>
 <div class="wrap">
-    <h1>Custom Theme Options Page</h1>
-    <form method="post" action="options.php">
-    <?php
-    // display settings field on theme-option page
-    settings_fields("theme-options-grp");
-    
-    // display all sections for theme-options page
-    do_settings_sections("autocircle-options");
-    submit_button();
-    ?>
-    </form>
+    <div class="option-holder">
+        <div class="ac-header clearfix">
+            <div class="ac-container">
+                <div class="ac-title">
+                    <a href="#">AutoCircle</a>
+                    <span class="ac-version">1.0.0</span>
+                </div>
+                <div class="ac-header-link">
+                    <ul>
+                        <li><a href="#">FAcebook</a></li>
+                        <li><a href="#">FAcebook</a></li>
+                        <li><a href="#">FAcebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h1>Custom Theme Options Page</h1>
+        <form method="post" action="options.php">
+        <?php
+        // display settings field on theme-option page
+        settings_fields("theme-options-grp");
+
+        // display all sections for theme-options page
+        do_settings_sections("autocircle-options");
+        submit_button();
+        ?>
+        </form>
+    </div>
 </div>
 <?php
     }
