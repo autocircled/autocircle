@@ -137,6 +137,17 @@ function autocircle_scripts() {
 add_action( 'wp_enqueue_scripts', 'autocircle_scripts' );
 
 /**
+ * Enqueue Admin Scripts
+ */
+if( !function_exists( 'autocircle_admin_scripts' ) ){
+    function autocircle_admin_scripts(){
+        wp_enqueue_style( 'autocircle-admin-style', get_template_directory_uri() . '/assets/css/admin/style.css', array(), AUTOCIRCLE_VERSION );
+        
+    }
+}
+add_action( 'admin_enqueue_scripts', 'autocircle_admin_scripts' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
