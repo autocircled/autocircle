@@ -550,7 +550,8 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%; }
+  width: 100%;
+  background: #222; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -562,23 +563,37 @@ textarea {
       position: absolute;
       top: 100%;
       left: -999em;
-      z-index: 99999; }
+      z-index: 99999;
+      transition: opacity 80ms linear;
+      transition-delay: 0s; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
       .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         display: block;
-        left: auto; }
+        left: 100%;
+        top: 0; }
       .main-navigation ul ul a {
         width: 200px; }
+      .main-navigation ul ul :hover > a,
+      .main-navigation ul ul .focus > a {
+        opacity: 1;
+        transition-delay: 150ms; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
-      left: auto; }
+      left: auto;
+      background: #333; }
   .main-navigation li {
     position: relative; }
+    .main-navigation li:hover > a, .main-navigation li.focus > a {
+      color: #fff;
+      background: #333; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    padding: 0 20px;
+    color: #f4f4f4;
+    line-height: 60px; }
 
 /* Small menu. */
 .menu-toggle,
@@ -590,7 +605,8 @@ textarea {
     display: none; }
 
   .main-navigation ul {
-    display: flex; } }
+    display: flex;
+    flex-wrap: wrap; } }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -788,5 +804,19 @@ textarea {
 --------------------------------------------- */
 .site-title {
   margin: 0; }
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.site-header .container {
+  padding: 40px 20px; }
+
+.navigation-wrapper {
+  position: relative; }
+
+a, button, input {
+  transition: color .1s ease-in-out,background-color .1s ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */
